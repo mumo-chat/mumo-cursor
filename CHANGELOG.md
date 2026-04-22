@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5 — 2026-04-22
+
+- Add `assets/logo.png` (512×512, dark background plate) — mumo's canonical square icon, reused from the brand kit. Required for Cursor Marketplace submission.
+- `plugin.json`: reference `assets/logo.png` via the `logo` field.
+
 ## 0.1.4 — 2026-04-22
 
 - README + rule: require the word `mumo` in invocations. Smoke-testing 0.1.3 surfaced that ambiguous phrasings like "ask a panel" can route to a generic response instead of this plugin — the agent resolves "panel" to a generic experts pattern rather than our MCP server.
