@@ -1,8 +1,8 @@
 {
   "name": "mumo",
   "displayName": "mumo",
-  "version": "0.1.5",
-  "description": "Consult a multi-model panel on contested decisions via MCP: architecture, plan review, strategy.",
+  "version": "0.1.6",
+  "description": "Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.",
   "logo": "assets/logo.png",
   "author": {
     "name": "Sourced LLC",

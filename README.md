@@ -1,8 +1,26 @@
 # mumo — Cursor plugin
 
-Multi-model deliberation as MCP tools, with an auto-triggering skill. Consult a panel of models (Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi) on contested decisions — architecture choices, plan reviews, pricing tradeoffs, strategy — where a single model might be confidently wrong.
+**Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.**
 
-Works in Cursor 2.5+. For Claude Code and Cowork, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp).
+Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
+
+Works in Cursor 2.5+. For Claude Code and Cowork, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For VS Code (GitHub Copilot), see [`mumo-chat/mumo-vscode`](https://github.com/mumo-chat/mumo-vscode).
+
+---
+
+![Cursor agent invokes the mumo panel via MCP](https://github.com/mumo-chat/mumo-cursor/raw/main/assets/screenshot-cursor-invocation.png)
+
+*Invoke mumo from Cursor's agent chat — the agent routes through MCP, convenes the panel, and returns the models' synthesis inside Cursor.*
+
+![The mumo claim map — what every model agreed on, challenged, or flagged for deeper exploration](https://github.com/mumo-chat/mumo-cursor/raw/main/assets/screenshot-claim-map.png)
+
+*The claim map at [mumo.chat](https://mumo.chat) — each contested statement plus every model's reaction (keep, challenge, explore, core, shift). Not a consensus answer; the structure underneath it.*
+
+![A multi-round mumo session carrying context forward across rounds](https://github.com/mumo-chat/mumo-cursor/raw/main/assets/screenshot-rounds.png)
+
+*Context carries forward automatically — add follow-up rounds until you have what you need, without re-pasting anything.*
+
+---
 
 ## What's in the box
 
