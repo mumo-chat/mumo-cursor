@@ -1,7 +1,7 @@
 {
   "name": "mumo",
   "displayName": "mumo",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Consult a multi-model panel on contested decisions via MCP: architecture, plan review, strategy.",
   "author": {
     "name": "Sourced LLC",
