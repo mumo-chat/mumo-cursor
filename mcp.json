@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mumo": {
+      "url": "https://mumo.chat/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:MUMO_API_KEY}"
+      }
+    }
+  }
+}

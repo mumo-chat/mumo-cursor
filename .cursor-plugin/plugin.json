@@ -1,0 +1,27 @@
+{
+  "name": "mumo",
+  "displayName": "mumo",
+  "version": "0.1.0",
+  "description": "Consult a multi-model panel on contested decisions via MCP: architecture, plan review, strategy.",
+  "author": {
+    "name": "Sourced LLC",
+    "email": "eric@mumo.chat"
+  },
+  "homepage": "https://mumo.chat/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mumo-chat/mumo-cursor.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "deliberation",
+    "multi-model",
+    "claude",
+    "gpt",
+    "gemini",
+    "panel",
+    "code-review",
+    "architecture"
+  ]
+}
