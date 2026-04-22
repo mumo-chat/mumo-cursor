@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 — 2026-04-22
+
+- `rules/mumo.mdc` — Cursor rule with `alwaysApply: true` so the agent proactively considers the panel on every conversation. Cursor doesn't auto-trigger skills on description match the way Claude Code does; rules are Cursor's equivalent primitive. Short body (~180 words) to keep per-turn token cost low.
+
 ## 0.1.0 — 2026-04-22
 
 Initial release.

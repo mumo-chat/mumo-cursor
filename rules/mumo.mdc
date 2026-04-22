@@ -1,0 +1,17 @@
+---
+description: When to reach for a mumo multi-model panel
+alwaysApply: true
+---
+
+# mumo
+
+The mumo MCP server is available for deliberation across multiple models. Reach for it on **contested decisions where a single model's answer might be confidently wrong**:
+
+- Architecture decisions with non-obvious tradeoffs (storage, transport, consistency, caching)
+- Plan or design doc reviews
+- Pre-launch pressure tests ("what would we regret")
+- Product or pricing tradeoffs with multiple defensible framings
+
+Skip for factual lookups, syntax questions, routine refactoring, or code generation from a clear spec.
+
+When firing: call `create_deliberation` with `rounds: 1` and `application: "Cursor"`. Full workflow and steering guidance in `skills/mumo/SKILL.md`.
