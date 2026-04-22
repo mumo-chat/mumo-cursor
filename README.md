@@ -32,11 +32,18 @@ You'll also need a mumo API key:
 
 ## Using the panel
 
-The skill auto-triggers on architecture tradeoffs, plan and design reviews, pre-launch pressure tests, and contested product or pricing decisions. It deliberately skips factual lookups, routine refactoring, and code generation from a clear spec. You can also invoke it explicitly: "run this by a mumo panel" or "get me a second opinion from mumo."
+**Reliable invocation: ask explicitly.** The plugin ships a Cursor rule + an auto-triggering skill that keep the panel available to the agent on every conversation, but Cursor's rule system treats both as soft priors — the agent often chooses to answer directly on confident-looking questions even when the rule matches. The most reliable way to route a decision through mumo is an explicit ask:
+
+- "Ask mumo about…"
+- "Run this by a mumo panel"
+- "Get me a second opinion from mumo on…"
+- "What do different models think about…"
+
+For the agent's decision criteria (what should go through mumo vs. what shouldn't), see [`skills/mumo/SKILL.md`](skills/mumo/SKILL.md).
 
 ### Try it first
 
-> Postgres or MongoDB for our event store given 50k events/day, a Postgres-experienced team, and a 3-month runway? What would we regret 6 months in?
+> Ask mumo: Postgres or MongoDB for our event store given 50k events/day, a Postgres-experienced team, and a 3-month runway? What would we regret 6 months in?
 
 The first round returns each model's prose plus a cross-model claim map showing where the panel agrees and where it splits. You can stop there, or `append_round` with typed snippets (KEEP / EXPLORE / CHALLENGE / CORE / SHIFT) to steer further.
 
