@@ -32,12 +32,17 @@ You'll also need a mumo API key:
 
 ## Using the panel
 
-**Reliable invocation: ask explicitly.** The plugin ships a Cursor rule + an auto-triggering skill that keep the panel available to the agent on every conversation, but Cursor's rule system treats both as soft priors — the agent often chooses to answer directly on confident-looking questions even when the rule matches. The most reliable way to route a decision through mumo is an explicit ask:
+**Name `mumo` explicitly in your prompt.** The plugin ships a Cursor rule + an auto-triggering skill that keep the panel available to the agent on every conversation, but Cursor's rule system treats both as soft priors. Two things go wrong without explicit naming:
+
+1. The agent may answer directly rather than route to mumo at all.
+2. Even when it does route out, vague phrasings like "ask a panel" or "what do different models think" may resolve to a generic response or a different tool — not this MCP server.
+
+**Reliable invocations** (the word `mumo` is what makes the routing stick):
 
 - "Ask mumo about…"
 - "Run this by a mumo panel"
 - "Get me a second opinion from mumo on…"
-- "What do different models think about…"
+- "What does mumo think about…"
 
 For the agent's decision criteria (what should go through mumo vs. what shouldn't), see [`skills/mumo/SKILL.md`](skills/mumo/SKILL.md).
 

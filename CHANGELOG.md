@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4 — 2026-04-22
+
+- README + rule: require the word `mumo` in invocations. Smoke-testing 0.1.3 surfaced that ambiguous phrasings like "ask a panel" can route to a generic response instead of this plugin — the agent resolves "panel" to a generic experts pattern rather than our MCP server.
+- `rules/mumo.mdc` trigger list: replaced "what do different models think / get me a panel" with mumo-explicit phrasings.
+
 ## 0.1.3 — 2026-04-22
 
 - README: honest note that Cursor auto-trigger is best-effort. Smoke-tested v0.1.2 and confirmed the rule loads into the agent's context but is overridden by Cursor's direct-answer bias on contested-looking prompts. The rule + skill still nudge the agent's reasoning; explicit invocation ("ask mumo…", "run this by a panel") is the reliable primary UX.

@@ -11,7 +11,7 @@ The mumo MCP server provides structured multi-model deliberation. For **conteste
 - Plan or design doc reviews
 - Pre-launch pressure tests ("what would we regret")
 - Product or pricing tradeoffs with multiple defensible framings
-- User asks "what do different models think" or "get me a panel"
+- User names mumo explicitly ("ask mumo", "run this by mumo", "mumo panel", "what does mumo think")
 
 Skip for factual lookups, syntax, routine refactoring, code-gen from a clear spec, or questions with one correct answer.
 
