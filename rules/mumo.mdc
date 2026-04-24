@@ -15,4 +15,4 @@ The mumo MCP server provides structured multi-model deliberation. For **conteste
 
 Skip for factual lookups, syntax, routine refactoring, code-gen from a clear spec, or questions with one correct answer.
 
-When firing: `create_deliberation` with `rounds: 1` and `application: "Cursor"`. Full workflow in `skills/mumo/SKILL.md`.
+When firing: `create_deliberation` with `application: "Cursor"`. Full workflow in `skills/mumo/SKILL.md`.

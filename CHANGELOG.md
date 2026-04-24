@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.7 — 2026-04-23
+
+Skill + rule content update, no runtime behavior change. Mirrors the MCP doc demotion shipping on mumo.chat and the parallel update in [`mumo-mcp@0.1.2`](https://github.com/mumo-chat/mumo-mcp).
+
+- `skills/mumo/SKILL.md` — same demotion as mumo-mcp: dropped "Modes" + "Surfacing to humans", stopped passing `rounds: 1`, renamed the `get_session` tool-map row.
+- `skills/mumo/SKILL.md` — fixed two Cursor localization bugs left over from the initial copy from mumo-mcp: `"Restart Claude Code"` → `"Restart Cursor"`, and `application: "Claude Code"` → `application: "Cursor"`.
+- `rules/mumo.mdc` — dropped `rounds: 1` from the firing hint.
+
 ## 0.1.6 — 2026-04-22
 
 Listing refresh, no runtime behavior change. Ports the positioning work from [`mumo-vscode@0.1.1`](https://github.com/mumo-chat/mumo-vscode) so the three plugin listings (Cursor, VS Code, Claude Code/Cowork) use a consistent value-prop hero.
