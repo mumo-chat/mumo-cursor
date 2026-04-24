@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8 — 2026-04-24
+
+- Added `get_credit` as the sixth MCP tool (wallet balance + bucket breakdown + autorefill state). Parallels [`mumo-mcp@0.1.3`](https://github.com/mumo-chat/mumo-mcp). README and SKILL.md tool map updated.
+
 ## 0.1.7 — 2026-04-23
 
 Skill + rule content update, no runtime behavior change. Mirrors the MCP doc demotion shipping on mumo.chat and the parallel update in [`mumo-mcp@0.1.2`](https://github.com/mumo-chat/mumo-mcp).
