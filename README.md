@@ -26,7 +26,6 @@ Works in Cursor 2.5+. For Claude Code, see [`mumo-chat/mumo-mcp`](https://github
 
 - **MCP server** — `https://mumo.chat/api/mcp`, seven tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`
 - **Auto-triggering skill** — `skills/mumo/SKILL.md` tells the agent *when* to reach for the panel (architecture tradeoffs, plan reviews, contested decisions)
-- **Moderator subagent** — `agents/mumo-moderator.md`, a dedicated subagent for running deliberations in isolated context
 - **Cursor rule** — `rules/mumo.mdc` reinforces routing on contested decisions
 
 ## Install
