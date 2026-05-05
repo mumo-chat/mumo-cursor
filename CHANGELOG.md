@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.1 — 2026-05-05
+
+Architecture parity with [`mumo-mcp@0.2.1`](https://github.com/mumo-chat/mumo-mcp): kernel + playbooks + reference, plus a moderator subagent. Cursor lacks the keychain/userConfig flow Claude Code has, so the env-var setup stays canonical.
+
+- `skills/mumo/SKILL.md` — rewritten as a compact kernel: deliberation loop, snippet-as-attention doctrine, non-forwarding test, continuation/stop rules, playbook index, user-preferences section. Synthesis guidance deferred to reference.
+- `skills/mumo/playbooks/` — four cognitive-shape playbooks: `contested-decision`, `design-review`, `uncertainty-expansion`, `red-team`. Loaded at most one per session when the shape clearly fits.
+- `skills/mumo/reference/` — five reference docs: `claim-maps`, `snippets`, `model-selection`, `synthesis`, `operating-notes`. Loaded on demand for extended mechanics.
+- `agents/mumo-moderator.md` — new subagent for running deliberations in isolated context. Defers to whichever model the user is currently engaged with in Cursor (no model pin).
+- `rules/mumo.mdc` — unchanged; reinforces routing on contested decisions.
+- `wait_for_round` added to README tool list (was missing since 0.1.8).
+- `plugin.json` author updated to `mumo`, homepage to `/install/cursor`, version bumped to 0.2.1.
+
 ## 0.1.8 — 2026-04-24
 
 - Added `get_credit` as the sixth MCP tool (wallet balance + bucket breakdown + autorefill state). Parallels [`mumo-mcp@0.1.3`](https://github.com/mumo-chat/mumo-mcp). README and SKILL.md tool map updated.

@@ -4,7 +4,7 @@
 
 Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
 
-Works in Cursor 2.5+. For Claude Code and Cowork, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For VS Code (GitHub Copilot), see [`mumo-chat/mumo-vscode`](https://github.com/mumo-chat/mumo-vscode).
+Works in Cursor 2.5+. For Claude Code, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For VS Code (GitHub Copilot), see [`mumo-chat/mumo-vscode`](https://github.com/mumo-chat/mumo-vscode).
 
 ---
 
@@ -24,8 +24,10 @@ Works in Cursor 2.5+. For Claude Code and Cowork, see [`mumo-chat/mumo-mcp`](htt
 
 ## What's in the box
 
-- **MCP server** — `https://mumo.chat/api/mcp`, six tools: `create_deliberation`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`
+- **MCP server** — `https://mumo.chat/api/mcp`, seven tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`
 - **Auto-triggering skill** — `skills/mumo/SKILL.md` tells the agent *when* to reach for the panel (architecture tradeoffs, plan reviews, contested decisions)
+- **Moderator subagent** — `agents/mumo-moderator.md`, a dedicated subagent for running deliberations in isolated context
+- **Cursor rule** — `rules/mumo.mdc` reinforces routing on contested decisions
 
 ## Install
 
@@ -39,7 +41,7 @@ https://github.com/mumo-chat/mumo-cursor
 
 Or install via marketplace once listed at [cursor.com/marketplace](https://cursor.com/marketplace).
 
-You'll also need a mumo API key:
+You'll also need a mumo API key. Cursor doesn't have a native keychain prompt for plugin secrets, so you'll set the key as an environment variable.
 
 1. Sign up at [mumo.chat](https://mumo.chat) and create a platform key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`)
 2. Export it in your shell before launching Cursor:
@@ -47,6 +49,8 @@ You'll also need a mumo API key:
    export MUMO_API_KEY=mmo_live_YOUR_KEY_HERE
    ```
 3. Restart Cursor so the new env var is picked up
+
+Full walkthrough: [mumo.chat/install/cursor](https://mumo.chat/install/cursor).
 
 ## Using the panel
 
@@ -70,14 +74,15 @@ For the agent's decision criteria (what should go through mumo vs. what shouldn'
 
 The first round returns each model's prose plus a cross-model claim map showing where the panel agrees and where it splits. You can stop there, or `append_round` with typed snippets (KEEP / EXPLORE / CHALLENGE / CORE / SHIFT) to steer further.
 
-See [mumo.chat/mcp](https://mumo.chat/mcp) for the tool reference, the deliberation loop, and prompt patterns. The canonical trigger language lives in [`skills/mumo/SKILL.md`](skills/mumo/SKILL.md).
+See [mumo.chat/install/cursor](https://mumo.chat/install/cursor) for the install guide and [mumo.chat/docs/mcp](https://mumo.chat/docs/mcp) for the tool reference. The canonical trigger language lives in [`skills/mumo/SKILL.md`](skills/mumo/SKILL.md).
 
 ## Links
 
 - Product — https://mumo.chat
-- MCP reference — https://mumo.chat/docs/mcp/reference
+- Install guide — https://mumo.chat/install/cursor
+- MCP reference — https://mumo.chat/docs/mcp
 - REST API — https://mumo.chat/docs/api
-- Claude Code / Cowork plugin — https://github.com/mumo-chat/mumo-mcp
+- Claude Code plugin — https://github.com/mumo-chat/mumo-mcp
 - Issues — https://github.com/mumo-chat/mumo-cursor/issues
 
 ## License
