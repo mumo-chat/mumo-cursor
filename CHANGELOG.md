@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.3 — 2026-05-22
+
+Sync with the canonical `mumo-mcp` baseline plus a marketplace-listing alignment. Bundles two prior unpushed commits (`52ed422` description tokenization, `c94a4ac` references rename + `recap.md`) under a single release marker. Triggered by Cursor's `review-plugin-submission` audit catching a broken `references/recap.md` link.
+
+- **`plugin.json` description** restored to the v0.1.6 cross-listing hero ("Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need."). Current README hero already matches. v0.1.6 explicitly chose this for unified marketplace framing across Cursor / VS Code / Claude Code listings; a post-v0.1.6 change to `plugin.json` drifted away from it without a corresponding CHANGELOG entry — this restores continuity.
+- **`skills/mumo/SKILL.md` description** now sourced from the shared `mumo-chat/mumo-mcp` build-system baseline (`DESCRIPTION_PREFIX` token + Cursor-specific tail). WHAT+WHEN phrasing per the AgentSkills-style validator hint: "Runs structured multi-model deliberations ... Use when independent perspectives are needed on ...". The new description applies broadly to the agent reading the skill; the marketplace listing description (above) stays punchy for the listing surface.
+- **`skills/mumo/reference/` → `skills/mumo/references/`** rename (plural, matching the baseline + the SKILL.md link targets). Previously SKILL.md linked to `references/snippets.md` etc. while the dir was at `reference/snippets.md`, breaking all 6 ref-doc links at follow-time. Caught while fixing the recap.md miss.
+- **`skills/mumo/references/recap.md` added** — covers the `recap_round` / `recap_session` opt-in flags surfaced in the recent mumo MCP server iteration. Caught by Cursor's `review-plugin-submission` audit as the P0 blocker.
+- **`plugin.json` version** 0.2.2 → 0.2.3.
+
+Note: the v0.2.1 entry below still references the old `skills/mumo/reference/` (singular) path. Preserved as historical record of what was true at that release; the v0.2.3 rename is documented here, not retconned there.
+
 ## 0.2.2 — 2026-05-05
 
 Removed `agents/mumo-moderator.md`. The agent positioned itself as the moderator role, but moderation is exactly what should stay with the primary agent — it owns the conversational context, the user's intent, and the cross-round steering decisions. A subagent that ran a "complete brief" panel was a thin operational helper at best, and the framing risked the primary agent over-delegating.
