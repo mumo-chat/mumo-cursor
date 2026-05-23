@@ -4,7 +4,7 @@
 
 Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
 
-Works in Cursor 2.5+. For Claude Code, see [`mumo-chat/mumo-mcp`](https://github.com/mumo-chat/mumo-mcp). For VS Code (GitHub Copilot), see [`mumo-chat/mumo-vscode`](https://github.com/mumo-chat/mumo-vscode).
+Works in Cursor 2.5+.
 
 ---
 
@@ -81,7 +81,6 @@ See [mumo.chat/install/cursor](https://mumo.chat/install/cursor) for the install
 - Install guide — https://mumo.chat/install/cursor
 - MCP reference — https://mumo.chat/docs/mcp
 - REST API — https://mumo.chat/docs/api
-- Claude Code plugin — https://github.com/mumo-chat/mumo-mcp
 - Issues — https://github.com/mumo-chat/mumo-cursor/issues
 
 ## License
