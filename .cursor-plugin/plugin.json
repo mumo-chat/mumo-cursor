@@ -1,7 +1,7 @@
 {
   "name": "mumo",
   "displayName": "mumo",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.",
   "logo": "assets/logo.png",
   "author": {
