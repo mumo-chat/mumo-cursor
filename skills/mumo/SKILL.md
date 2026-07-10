@@ -9,11 +9,11 @@ mumo runs deliberations across multiple AI models. Use it when independent persp
 
 ## Setup
 
-The MCP server needs a mumo API key.
+The MCP server needs a mumo API key, configured in Cursor's user-level MCP file (`~/.cursor/mcp.json`).
 
 1. Create a key at https://mumo.chat/settings/api-keys (keys start with `mmo_live_`)
-2. Export it: `export MUMO_API_KEY=mmo_live_…`
-3. Restart Cursor
+2. Add the server at https://mumo.chat/install/cursor — paste the key for a one-click "Add to Cursor" install (or copy the equivalent `mcp.json` entry from the same page)
+3. Confirm the `mumo` server shows green under Tools & MCP
 
 If mumo tools return auth errors, tell the user and stop. Full setup: https://mumo.chat/install/cursor
 
@@ -204,6 +204,7 @@ The panel does not need to converge. Sometimes the right output is a clear map o
 | Wait for model responses | `wait_for_round` |
 | Add a follow-up round | `append_round` |
 | Recover/read full state | `get_session` |
+| Share a session at a public link | `share_session` |
 | Find prior sessions | `list_sessions` |
 | Confirm model IDs | `list_models` |
 | Check wallet balance | `get_credit` |

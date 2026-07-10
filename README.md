@@ -24,11 +24,33 @@ Works in Cursor 2.5+.
 
 ## What's in the box
 
-- **MCP server** — `https://mumo.chat/api/mcp`, seven tools: `create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `list_sessions`, `list_models`, `get_credit`
 - **Auto-triggering skill** — `skills/mumo/SKILL.md` tells the agent *when* to reach for the panel (architecture tradeoffs, plan reviews, contested decisions)
 - **Cursor rule** — `rules/mumo.mdc` reinforces routing on contested decisions
 
+The plugin deliberately contributes **no MCP server of its own** — you add the mumo server to your Cursor config in one click (below), and the skill and rule bind to the server's tool names (`create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `share_session`, `list_sessions`, `list_models`, `get_credit`), not to a server label. That keeps your API key out of plugin config entirely.
+
 ## Install
+
+**1. Add the mumo server to Cursor** — one click, no environment variables, no terminal.
+
+Create a key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`), then paste it at [mumo.chat/install/cursor](https://mumo.chat/install/cursor) for an official **Add to Cursor** install link. It writes the server into your user-level `~/.cursor/mcp.json` — survives restarts and reboots, identical on macOS, Linux, and Windows. Prefer not to click a protocol link? The same page shows the equivalent `mcp.json` entry to merge by hand:
+
+```json
+{
+  "mcpServers": {
+    "mumo": {
+      "url": "https://mumo.chat/api/mcp",
+      "headers": {
+        "Authorization": "Bearer mmo_live_YOUR_KEY_HERE"
+      }
+    }
+  }
+}
+```
+
+Confirm the `mumo` server shows green under **Tools & MCP**. Keys are revocable any time from the dashboard; keep `~/.cursor/mcp.json` in your home dotfiles, not a tracked repo.
+
+**2. Install this plugin** — the behavior layer.
 
 ```bash
 # In Cursor, open the Command Palette and run:
@@ -38,16 +60,7 @@ Cursor: Add Plugin from GitHub
 https://github.com/mumo-chat/mumo-cursor
 ```
 
-Or install via marketplace once listed at [cursor.com/marketplace](https://cursor.com/marketplace).
-
-You'll also need a mumo API key. Cursor doesn't have a native keychain prompt for plugin secrets, so you'll set the key as an environment variable.
-
-1. Sign up at [mumo.chat](https://mumo.chat) and create a platform key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`)
-2. Export it in your shell before launching Cursor:
-   ```bash
-   export MUMO_API_KEY=mmo_live_YOUR_KEY_HERE
-   ```
-3. Restart Cursor so the new env var is picked up
+Or install via marketplace once listed at [cursor.com/marketplace](https://cursor.com/marketplace). Restart Cursor (or reload the window) so it picks up the plugin.
 
 Full walkthrough: [mumo.chat/install/cursor](https://mumo.chat/install/cursor).
 

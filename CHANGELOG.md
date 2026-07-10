@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 — 2026-07-10
+
+Install architecture: one-click server config, no environment variables.
+
+- The plugin no longer contributes an MCP server. Add the mumo server with the official "Add to Cursor" link at [mumo.chat/install/cursor](https://mumo.chat/install/cursor) (or merge the equivalent `~/.cursor/mcp.json` entry shown there). The previous env-var path (`MUMO_API_KEY`) was unreliable for GUI-launched Cursor — especially on macOS, where the variable didn't survive reboots — and is retired.
+- Skill and rule are unchanged in behavior: they bind to mumo's tool names, so they work with the server you configure regardless of its label.
+- Tool list updated: `share_session` (publish a session at a public link) joined the server's toolset.
+
 ## 0.5.0 — 2026-07-04
 
 Reaction-visibility model + per-round Takeaway.
