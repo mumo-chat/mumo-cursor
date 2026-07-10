@@ -33,7 +33,7 @@ The plugin deliberately contributes **no MCP server of its own** — you add the
 
 **1. Add the mumo server to Cursor** — one click, no environment variables, no terminal.
 
-Create a key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`), then paste it at [mumo.chat/install/cursor](https://mumo.chat/install/cursor) for an official **Add to Cursor** install link. It writes the server into your user-level `~/.cursor/mcp.json` — survives restarts and reboots, identical on macOS, Linux, and Windows. Prefer not to click a protocol link? The same page shows the equivalent `mcp.json` entry to merge by hand:
+Create a key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`), then paste it at [mumo.chat/install/cursor](https://mumo.chat/install/cursor) for an official **Add to Cursor** install link. Cursor opens an **Install MCP Server** dialog pre-filled with the mumo server — click **Install**, and it lands in your user-level `~/.cursor/mcp.json`: survives restarts and reboots, identical on macOS, Linux, and Windows. Prefer not to click a protocol link? The same page shows the equivalent `mcp.json` entry to merge by hand:
 
 ```json
 {
