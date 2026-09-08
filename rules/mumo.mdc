@@ -5,7 +5,7 @@ alwaysApply: true
 
 # mumo
 
-The mumo MCP server provides structured multi-model deliberation. For **contested decisions** where a single model's answer might be confidently wrong, **either call `create_deliberation` yourself OR ask the user "want me to run this by a mumo panel?" before giving a direct answer**:
+The mumo MCP server provides structured multi-model deliberation. For **contested decisions** worth checking across labs before you commit, **either call `create_deliberation` yourself OR ask the user "want me to run this by a mumo panel?" before giving a direct answer**:
 
 - Architecture decisions with non-obvious tradeoffs (storage, transport, consistency, caching)
 - Plan or design doc reviews

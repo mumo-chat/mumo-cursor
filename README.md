@@ -2,7 +2,7 @@
 
 **Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.**
 
-Claude, GPT, Gemini, Grok, Qwen, GLM, Kimi in parallel. For contested decisions — architecture, plan review, strategy — where a single model might be confidently wrong.
+Claude, GPT, Gemini, Grok, DeepSeek, Kimi, and more, in parallel. Each model answers in full and then reacts to the others' claims in its own words — typed cross-model reactions, not a merged verdict — for architecture, plan review, pricing, and strategy calls worth checking across labs.
 
 Works in Cursor 2.5+.
 

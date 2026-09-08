@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.0 — 2026-09-08
+
+Coordinated client release rendered from the mumo-mcp 0.6.0 baseline.
+
+- `SKILL.md`: `wait_for_round` taught in its one-id form (`session_id` alone resolves to the round in flight; `round_id` only for an earlier round); intro names the current model families and the typed cross-model reactions.
+- `references/operating-notes.md` re-synced with the baseline (the `/progress` diagnostic-polling section).
+- README intro updated.
+
 ## 0.6.0 — 2026-07-10
 
 Install architecture: one-click server config, no environment variables.
