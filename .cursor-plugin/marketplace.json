@@ -1,0 +1,20 @@
+{
+  "name": "mumo",
+  "owner": {
+    "name": "mumo",
+    "email": "support@mumo.chat"
+  },
+  "metadata": {
+    "description": "Multi-model deliberation panel for Cursor — full responses plus claim-level typed reactions from models across labs."
+  },
+  "plugins": [
+    {
+      "name": "mumo",
+      "source": "./",
+      "description": "Multi-model deliberation panel. Diverse AI voices + claim-level reactions on contested decisions.",
+      "homepage": "https://mumo.chat/install/cursor",
+      "repository": "https://github.com/mumo-chat/mumo-cursor",
+      "license": "MIT"
+    }
+  ]
+}

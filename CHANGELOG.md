@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.8.0 — 2026-09-09
+
+Installable again from a folder, and honest install instructions.
+
+- New `.cursor-plugin/marketplace.json` listing this repo as a one-plugin marketplace (`source: "./"`). Cursor's add-from-folder flow requires a marketplace manifest even for a single plugin; without it the add fails with "No marketplace manifest found", which is what 0.7.0 did.
+- README install step 2 now describes the two sideload paths that exist — `~/.cursor/plugins/local/mumo` + Developer: Reload Window, or adding the cloned folder from the Plugins view — instead of a "Cursor: Add Plugin from GitHub" command that does not exist for individual accounts.
+- `plugin.json`: `repository` is a plain URL, `author.email` added.
+- Still no bundled MCP server, now with the reason on record: Cursor plugin variables (`${MUMO_API_KEY}` in `mcp.json`) are set in the team dashboard, and an individual sideload install never prompts for the value (verified 2026-09-09), so a bundled server would ship with no credential. The bundled, key-free server returns when the mumo MCP endpoint supports OAuth.
+- Skill, rule, tool list, and behavior unchanged from 0.7.0.
+
 ## 0.7.0 — 2026-09-08
 
 Coordinated client release rendered from the mumo-mcp 0.6.0 baseline.

@@ -27,7 +27,7 @@ Works in Cursor 2.5+.
 - **Auto-triggering skill** — `skills/mumo/SKILL.md` tells the agent *when* to reach for the panel (architecture tradeoffs, plan reviews, contested decisions)
 - **Cursor rule** — `rules/mumo.mdc` reinforces routing on contested decisions
 
-The plugin deliberately contributes **no MCP server of its own** — you add the mumo server to your Cursor config in one click (below), and the skill and rule bind to the server's tool names (`create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `share_session`, `list_sessions`, `list_models`, `get_credit`), not to a server label. That keeps your API key out of plugin config entirely.
+The plugin contributes **no MCP server of its own** — you add the mumo server to your Cursor config in one click (below), and the skill and rule bind to the server's tool names (`create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `share_session`, `list_sessions`, `list_models`, `get_credit`), not to a server label. That keeps your API key out of plugin config entirely. (Cursor plugin variables can carry a key for team-dashboard installs, but an individual install never prompts for one, so a bundled server would arrive with no credential.)
 
 ## Install
 
@@ -52,15 +52,14 @@ Confirm the `mumo` server shows green under **Tools & MCP**. Keys are revocable 
 
 **2. Install this plugin** — the behavior layer.
 
-```bash
-# In Cursor, open the Command Palette and run:
-Cursor: Add Plugin from GitHub
+From the Cursor Marketplace once listed at [cursor.com/marketplace](https://cursor.com/marketplace). Until then, sideload it. Either copy the repo into Cursor's local plugins folder and reload:
 
-# Then paste:
-https://github.com/mumo-chat/mumo-cursor
+```bash
+git clone https://github.com/mumo-chat/mumo-cursor ~/.cursor/plugins/local/mumo
+# then in Cursor: Command Palette → "Developer: Reload Window"
 ```
 
-Or install via marketplace once listed at [cursor.com/marketplace](https://cursor.com/marketplace). Restart Cursor (or reload the window) so it picks up the plugin.
+…or clone it anywhere and add that folder from Cursor's **Plugins** view (the repo ships the `.cursor-plugin/marketplace.json` that flow requires). The plugin then appears under **Discover** with one skill and one rule; open it to confirm.
 
 Full walkthrough: [mumo.chat/install/cursor](https://mumo.chat/install/cursor).
 

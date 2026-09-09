@@ -1,18 +1,16 @@
 {
   "name": "mumo",
   "displayName": "mumo",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.",
   "logo": "assets/logo.png",
   "author": {
     "name": "mumo",
+    "email": "support@mumo.chat",
     "url": "https://mumo.chat"
   },
   "homepage": "https://mumo.chat/install/cursor",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mumo-chat/mumo-cursor.git"
-  },
+  "repository": "https://github.com/mumo-chat/mumo-cursor",
   "license": "MIT",
   "keywords": [
     "mcp",
