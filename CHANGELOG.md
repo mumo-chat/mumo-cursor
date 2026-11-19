@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.9.0 — 2026-11-19
+
+Coordinated client release rendered from the mumo-mcp 0.7.0 baseline.
+
+- New tool: `ask_a_model` puts a question to one model of your choice and returns one answer, with no cross-model reactions or claim map. `SKILL.md` has a new section on when to use it and when to use `create_deliberation` instead. The plugin sets no tool allowlist, so the tool is available as soon as the server lists it.
+- `SKILL.md` now tells the agent to surface each round's `web_url`. `claim_map_url` still works and carries the same value.
+- README tool list updated.
+
 ## 0.8.0 — 2026-09-09
 
 Installable again from a folder, and honest install instructions.

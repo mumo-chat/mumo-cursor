@@ -27,7 +27,7 @@ Works in Cursor 2.5+.
 - **Auto-triggering skill** — `skills/mumo/SKILL.md` tells the agent *when* to reach for the panel (architecture tradeoffs, plan reviews, contested decisions)
 - **Cursor rule** — `rules/mumo.mdc` reinforces routing on contested decisions
 
-The plugin contributes **no MCP server of its own** — you add the mumo server to your Cursor config in one click (below), and the skill and rule bind to the server's tool names (`create_deliberation`, `wait_for_round`, `append_round`, `get_session`, `share_session`, `list_sessions`, `list_models`, `get_credit`), not to a server label. That keeps your API key out of plugin config entirely. (Cursor plugin variables can carry a key for team-dashboard installs, but an individual install never prompts for one, so a bundled server would arrive with no credential.)
+The plugin contributes **no MCP server of its own** — you add the mumo server to your Cursor config in one click (below), and the skill and rule bind to the server's tool names (`create_deliberation`, `ask_a_model`, `wait_for_round`, `append_round`, `get_session`, `share_session`, `list_sessions`, `list_models`, `get_credit`), not to a server label. That keeps your API key out of plugin config entirely. (Cursor plugin variables can carry a key for team-dashboard installs, but an individual install never prompts for one, so a bundled server would arrive with no credential.)
 
 ## Install
 
