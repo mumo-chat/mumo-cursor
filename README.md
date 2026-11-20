@@ -83,7 +83,7 @@ For the agent's decision criteria (what should go through mumo vs. what shouldn'
 
 > Ask mumo: Postgres or MongoDB for our event store given 50k events/day, a Postgres-experienced team, and a 3-month runway? What would we regret 6 months in?
 
-The first round returns each model's prose plus a cross-model claim map showing where the panel agrees and where it splits. You can stop there, or `append_round` with typed snippets (KEEP / EXPLORE / CHALLENGE / CORE / SHIFT) to steer further.
+The first round returns each model's response plus the models' reactions to each other's claims, showing where the panel agrees and where it splits. You can stop there, or `append_round` with your own typed reactions (KEEP / EXPLORE / CHALLENGE / CORE / SHIFT) to steer further.
 
 See [mumo.chat/install/cursor](https://mumo.chat/install/cursor) for the install guide and [mumo.chat/docs/mcp](https://mumo.chat/docs/mcp) for the tool reference. The canonical trigger language lives in [`skills/mumo/SKILL.md`](skills/mumo/SKILL.md).
 
