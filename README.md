@@ -27,13 +27,27 @@ Works in Cursor 2.5+.
 - **Auto-triggering skill** — `skills/mumo/SKILL.md` tells the agent *when* to reach for the panel (architecture tradeoffs, plan reviews, contested decisions)
 - **Cursor rule** — `rules/mumo.mdc` reinforces routing on contested decisions
 
-The plugin contributes **no MCP server of its own** — you add the mumo server to your Cursor config in one click (below), and the skill and rule bind to the server's tool names (`create_deliberation`, `ask_a_model`, `wait_for_round`, `append_round`, `get_session`, `share_session`, `list_sessions`, `list_models`, `get_credit`), not to a server label. That keeps your API key out of plugin config entirely. (Cursor plugin variables can carry a key for team-dashboard installs, but an individual install never prompts for one, so a bundled server would arrive with no credential.)
+The plugin contributes **no MCP server of its own** — you add the mumo server to your Cursor config in one click (below), and the skill and rule bind to the server's tool names (`create_deliberation`, `ask_a_model`, `wait_for_round`, `append_round`, `get_session`, `share_session`, `list_sessions`, `list_models`, `get_credit`), not to a server label.
 
 ## Install
 
-**1. Add the mumo server to Cursor** — one click, no environment variables, no terminal.
+**1. Add the mumo server to Cursor** — one click, no API key, no environment variables.
 
-Create a key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`), then paste it at [mumo.chat/install/cursor](https://mumo.chat/install/cursor) for an official **Add to Cursor** install link. Cursor opens an **Install MCP Server** dialog pre-filled with the mumo server — click **Install**, and it lands in your user-level `~/.cursor/mcp.json`: survives restarts and reboots, identical on macOS, Linux, and Windows. Prefer not to click a protocol link? The same page shows the equivalent `mcp.json` entry to merge by hand:
+Click **Add to Cursor** at [mumo.chat/install/cursor](https://mumo.chat/install/cursor). Cursor opens an **Install MCP server?** dialog pre-filled with the mumo server — click **Install**, and it lands in your user-level `~/.cursor/mcp.json`. Prefer not to click a protocol link? Merge this entry by hand:
+
+```json
+{
+  "mcpServers": {
+    "mumo": { "url": "https://mumo.chat/api/mcp/oauth" }
+  }
+}
+```
+
+**2. Sign in** — in Cursor Settings → **Tools & MCP**, start the sign-in from the `mumo` row. Your browser opens to **Connect your mumo account**. Sign in to mumo if asked (or create an account; every account gets free credit each month), click **Continue**, then **Allow access**. The pages list `www.cursor.com` and an address on this computer (`localhost`) as where you are sent next: that is Cursor waiting for the sign-in to finish. Accept the browser's **Open Cursor?** prompt. The `mumo` server then shows green under **Tools & MCP**.
+
+To disconnect later, remove the connection under **Settings → API Keys → Connected apps** at [mumo.chat/settings/api-keys](https://mumo.chat/settings/api-keys).
+
+**Using an API key instead.** For Cursor's command-line agent or an unattended run, create a key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (keys start with `mmo_live_`) and paste it into the key section of [mumo.chat/install/cursor](https://mumo.chat/install/cursor). It builds an install link for the key server:
 
 ```json
 {
@@ -48,9 +62,9 @@ Create a key at [Settings → API Keys](https://mumo.chat/settings/api-keys) (ke
 }
 ```
 
-Confirm the `mumo` server shows green under **Tools & MCP**. Keys are revocable any time from the dashboard; keep `~/.cursor/mcp.json` in your home dotfiles, not a tracked repo.
+Keep only one server named `mumo`. Keys are revocable any time from the dashboard; never commit a file that holds a live key.
 
-**2. Install this plugin** — the behavior layer.
+**3. Install this plugin** — the behavior layer.
 
 From the Cursor Marketplace once listed at [cursor.com/marketplace](https://cursor.com/marketplace). Until then, sideload it. Either copy the repo into Cursor's local plugins folder and reload:
 

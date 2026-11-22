@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.12.0 — 2026-11-21
+
+- Setup now uses a browser sign-in. The **Add to Cursor** link at mumo.chat/install/cursor adds the server at `https://mumo.chat/api/mcp/oauth` with no API key; you then sign in from the `mumo` row under Tools & MCP. The tools, billing and limits are the same.
+- A server already set up with an API key keeps working. To switch, remove it under Tools & MCP and add the sign-in server. The key path stays for Cursor's command-line agent and unattended runs; the README has both.
+- The plugin still ships no MCP server of its own.
+- `SKILL.md` setup text and the README updated to match.
+
 ## 0.11.0 — 2026-11-21
 
 Coordinated client release rendered from the mumo-mcp 0.9.0 baseline. It goes with mumo MCP server 1.4.0.
