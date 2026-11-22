@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "mumo": {
+      "url": "https://mumo.chat/api/mcp/oauth"
+    }
+  }
+}

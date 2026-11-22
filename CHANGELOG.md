@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.0 — 2026-11-21
+
+- The plugin now includes the mumo MCP server (`mcp.json`), so one install brings the server, the skill and the rule. The server connects with a browser sign-in: under Customize → MCPs, click **Authenticate** on `mumo`.
+- If you added a `mumo` server by hand for an earlier version, remove it so you do not have two: delete the `mumo` entry from `~/.cursor/mcp.json` and reload the window.
+- The **Add to Cursor** link at mumo.chat/install/cursor stays for adding the server without the plugin, and the API key path stays for Cursor's command-line agent and unattended runs.
+- `SKILL.md` setup text and the README updated to match.
+
 ## 0.12.0 — 2026-11-21
 
 - Setup now uses a browser sign-in. The **Add to Cursor** link at mumo.chat/install/cursor adds the server at `https://mumo.chat/api/mcp/oauth` with no API key; you then sign in from the `mumo` row under Tools & MCP. The tools, billing and limits are the same.
