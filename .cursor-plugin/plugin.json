@@ -1,8 +1,8 @@
 {
   "name": "mumo",
   "displayName": "mumo",
-  "version": "0.13.0",
-  "description": "Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.",
+  "version": "0.13.1",
+  "description": "Deliberate with Claude, GPT, Gemini, DeepSeek and more in Cursor. Run a panel where each model answers in full and reacts to the others' claims, or ask one model for a second opinion.",
   "logo": "assets/logo.png",
   "author": {
     "name": "mumo",

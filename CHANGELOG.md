@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.13.1 — 2026-11-21
+
+- New listing description.
+- README: install from inside Cursor with Customize → + Add → From GitHub Repository; the clone command stays as the terminal alternative.
+
 ## 0.13.0 — 2026-11-21
 
 - The plugin now includes the mumo MCP server (`mcp.json`), so one install brings the server, the skill and the rule. The server connects with a browser sign-in: under Customize → MCPs, click **Authenticate** on `mumo`.

@@ -1,6 +1,6 @@
 # mumo — Cursor plugin
 
-**Multi-model responses + cross-model reactions. Want more rounds? Context carries automatically. Stop when you have what you need.**
+**Deliberate with Claude, GPT, Gemini, DeepSeek and more in Cursor. Run a panel where each model answers in full and reacts to the others' claims, or ask one model for a second opinion.**
 
 Claude, GPT, Gemini, Grok, DeepSeek, Kimi, and more, in parallel. Each model answers in full and then reacts to the others' claims in its own words — typed cross-model reactions, not a merged verdict — for architecture, plan review, pricing, and strategy calls worth checking across labs.
 
@@ -30,14 +30,14 @@ Works in Cursor 2.5+.
 
 ## Install
 
-**1. Install the plugin.** Clone it into Cursor's local plugins folder and reload:
+**1. Install the plugin.** In Cursor, open **Customize**, click **+ Add** and choose **From GitHub Repository**. Enter `https://github.com/mumo-chat/mumo-cursor`. Cursor lists the repository as its own marketplace with one plugin, `mumo`. Open it and click **Add to Cursor**. The plugin page shows one MCP server, one skill and one rule.
+
+Prefer a terminal? Clone it into Cursor's local plugins folder and reload:
 
 ```bash
 git clone https://github.com/mumo-chat/mumo-cursor ~/.cursor/plugins/local/mumo
 # then in Cursor: Command Palette → "Developer: Reload Window"
 ```
-
-Open **Customize** and search for `mumo`: the plugin shows one MCP server, one skill and one rule.
 
 **2. Sign in.** Under **Customize → MCPs**, the `mumo` server reads **Needs Authentication**. Click **Authenticate**. Your browser opens to **Connect your mumo account**. Sign in to mumo if asked (or create an account; every account gets free credit each month), click **Continue**, then **Allow access**. The pages list `www.cursor.com` and an address on this computer (`localhost`) as where you are sent next: that is Cursor waiting for the sign-in to finish. Accept the browser's **Open Cursor?** prompt. The `mumo` server then shows green with its tools enabled.
 
